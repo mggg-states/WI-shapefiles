@@ -1,5 +1,5 @@
 # Wisconsin Election Shapefile
-This shapefile was compiled and processed by members of the Voting Rights Data Institute. The Voting Rights Data Institute (VRDI) was a 2018 summer intensive sponsored by the Metric Geometry and Gerrymandering Group (MGGG) at Tufts and MIT, with major support from a Bose Research Grant at MIT and from the Jonathon M. Tisch College of Civic Life at Tufts.
+This shapefile was processed by members of the Voting Rights Data Institute. The Voting Rights Data Institute (VRDI) was a 2018 summer intensive sponsored by the Metric Geometry and Gerrymandering Group (MGGG) at Tufts and MIT, with major support from a Bose Research Grant at MIT and from the Jonathon M. Tisch College of Civic Life at Tufts.
 
 ## Sources
 The wards shapefile with election data comes from the Wisconsin State Legislature and is available for download on the LTSB Open Data Page (https://data-ltsb.opendata.arcgis.com). This shapefile contains the 2011 wards which were in place during the 2012 to 2016 elections. 
@@ -195,3 +195,6 @@ NOTE: The shapefile has results for 2014 that use the LTSB code for US Senate (U
 
 ## Projection
 The shapefile uses a NAD83 UTM zone 16 N (or EPSG:26916) projection.
+
+## Rating
+We give this shapefile a B rating. Wisconsin's Legislative Technology Services Bureau (LTSB) disaggregates election data from ward groups to wards using voting age population rather than voting eligible population. The use of voting age population to disaggregate results can be misleading particularly in wards with a large population of people who are over 18, but are incarcerated and thus not eligible to vote. MGGG and its collaborators are currently working to create a wards shapefile dissagregated by voting eligible population.
