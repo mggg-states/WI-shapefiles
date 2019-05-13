@@ -2,12 +2,12 @@
 This shapefile was processed by members of the Voting Rights Data Institute. The Voting Rights Data Institute (VRDI) was a 2018 summer intensive sponsored by the Metric Geometry and Gerrymandering Group (MGGG) at Tufts and MIT, with major support from a Bose Research Grant at MIT and from the Jonathon M. Tisch College of Civic Life at Tufts.
 
 ## Sources
-The wards shapefile with election data comes from the Wisconsin State Legislature and is available for download on the LTSB Open Data Page (https://data-ltsb.opendata.arcgis.com). This shapefile contains the 2011 wards which were in place during the 2012 to 2016 elections. 
+The wards shapefile with election data comes from the Wisconsin State Legislature and is available for download on the [LTSB Open Data Page](https://data-ltsb.opendata.arcgis.com). This shapefile contains the 2011 wards which were in place during the 2012 to 2016 elections. 
 
 ## Processing
-The state of Wisconsin reports their election data at the level of ward groups. The LTSB disaggregates the data from the reported unit to wards using voting age population, or rather the population over the age of 18 according to the 2010 US Census (for further explanation of the LTSB methods see here: https://www.arcgis.com/home/item.html?id=62d5782482cd45f2898fe7e3d4272c10). MGGG and its partners are currently working to disaggregate votes using voting eligible population to take into account factors such as incarcerated people or noncitizens who cannot vote.
+The state of Wisconsin reports their election data at the level of ward groups. The LTSB disaggregates the data from the reported unit to wards using voting age population, or rather the population over the age of 18 according to the 2010 US Census (for further explanation of the LTSB methods see [here](https://www.arcgis.com/home/item.html?id=62d5782482cd45f2898fe7e3d4272c10)). MGGG and its partners are currently working to disaggregate votes using voting eligible population to take into account factors such as incarcerated people or noncitizens who cannot vote.
 
-The raw shapefile downloaded from the LTSB data portal contains many topology errors that made it impossible to use it to run MCMC (see https://gerrychain.readthedocs.io/en/latest/). The script check_shapefile_connectivity.py (available in https://github.com/gerrymandr/Preprocessing) was run to fix these topology errors.
+The raw shapefile downloaded from the LTSB data portal contains many topology errors that made it impossible to use it to run [MGGG's Markov chain](https://gerrychain.readthedocs.io/en/latest/). The script [check_shapefile_connectivity.py](https://github.com/gerrymandr/Preprocessing) was run to fix these topology errors.
 
 ## Metadata
 Below is a brief description of each of the listed variables in the attribute table of the ward shapefile:
