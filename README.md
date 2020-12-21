@@ -1,16 +1,16 @@
 # Wisconsin Election Shapefile
-This shapefile was processed by members of the Voting Rights Data Institute. The Voting Rights Data Institute (VRDI) was a 2018 summer intensive sponsored by the Metric Geometry and Gerrymandering Group (MGGG) at Tufts and MIT, with major support from a Bose Research Grant at MIT and from the Jonathon M. Tisch College of Civic Life at Tufts.
+The 2011 shapefile was processed by members of the Voting Rights Data Institute. The Voting Rights Data Institute (VRDI) was a 2018 summer intensive sponsored by the Metric Geometry and Gerrymandering Group (MGGG) at Tufts and MIT, with major support from a Bose Research Grant at MIT and from the Jonathan M. Tisch College of Civic Life at Tufts. The 2020 shapefile was processed by members of the MGGG.
 
 ## Sources
-The wards shapefile with election data comes from the Wisconsin State Legislature and is available for download on the [LTSB Open Data Page](https://data-ltsb.opendata.arcgis.com). This shapefile contains the 2011 wards which were in place during the 2012 to 2016 elections. 
+The wards shapefiles with election data come from the Wisconsin State Legislature's Legislative Technology Services Bureau (LTSB) and are available for download on the [LTSB Open Data Page](https://data-ltsb.opendata.arcgis.com). The 2011 wards were in place during the 2012 to 2016 elections. The 2020 wards were in place during the 2018 elections.
 
 ## Processing
-The state of Wisconsin reports their election data at the level of ward groups. The LTSB disaggregates the data from the reported unit to wards using voting age population, or rather the population over the age of 18 according to the 2010 US Census (for further explanation of the LTSB methods see [here](https://www.arcgis.com/home/item.html?id=62d5782482cd45f2898fe7e3d4272c10)). MGGG and its partners are currently working to disaggregate votes using voting eligible population to take into account factors such as incarcerated people or noncitizens who cannot vote.
+The state of Wisconsin reports their election data at the level of ward groups. The LTSB disaggregates the data from the reported unit to wards using methods based on 2010 population, described in detail [here](https://data-ltsb.opendata.arcgis.com/datasets/2018-2012-election-data-with-2011-wards) and [here](https://data-ltsb.opendata.arcgis.com/datasets/2012-2018-election-data-with-2020-wards). However, the 2011 shapefile was disaggregated from ward groups to wards using voting age population, and the 2020 was disaggregated from ward groups to wards using total population.
 
-The raw shapefile downloaded from the LTSB data portal contains many topology errors that made it impossible to use it to run [MGGG's Markov chain](https://gerrychain.readthedocs.io/en/latest/). The script [check_shapefile_connectivity.py](https://github.com/gerrymandr/Preprocessing) was run to fix these topology errors.
+The 2011 raw shapefile downloaded from the LTSB data portal contains many topology errors that made it impossible to use it to run [MGGG's Markov chain](https://gerrychain.readthedocs.io/en/latest/). The script [check_shapefile_connectivity.py](https://github.com/gerrymandr/Preprocessing) was run to fix these topology errors. Extremely minor changes were made to the 2020 shapefile to run [MGGG's Markov chain](https://gerrychain.readthedocs.io/en/latest/). Demographic data were aggregated from the block level using MGGG’s proration software. Congressional and state legislative district IDs were also assigned to precincts using this package.
 
 ## Metadata
-Below is a brief description of each of the listed variables in the attribute table of the ward shapefile:
+**2011 shapefile**
 - `GEOID10`: Ward FIPS code
 - `OBJECTID`: Ward identifier
 - `NAME`: Ward name
@@ -193,8 +193,72 @@ Below is a brief description of each of the listed variables in the attribute ta
 
 NOTE: The shapefile has results for 2014 that use the LTSB code for US Senate (USS). This is a mistake that the LTSB has fixed in later versions of this shapefile. There was no US Senate election in Wisconsin in 2014. These are the results for the Wisconsin state senate. This is reflected in the descriptions of the variables.
 
+**2020 shapefile**
+* `STATE`: State
+* `STATEFP`: State FIPS code
+* `COUNTYFP`: County FIPS code
+* `COUNTY`: County
+* `Precinct`: Precinct (ward)
+* `Code`: Precinct code
+* `Code-2`: Precinct code (2)
+* `GOV18D`: Number of votes for 2018 Democratic gubernatorial candidate
+* `GOV18R`: Number of votes for 2018 Republican gubernatorial candidate
+* `SOS18D`: Number of votes for 2018 Democratic secretary of state candidate
+* `SOS18R`: Number of votes for 2018 Republican secretary of state candidate
+* `TRE18D`: Number of votes for 2018 Democratic treasurer candidate
+* `TRE18R`: Number of votes for 2018 Republican treasurer candidate
+* `USH18D`: Number of votes for 2018 Democratic US house candidate
+* `USH18R`: Number of votes for 2018 Republican US house candidate
+* `SEN18D`: Number of votes for 2018 Democratic senate candidate
+* `SEN18R`: Number of votes for 2018 Republican senate candidate
+* `AG18D`: Number of votes for 2018 Democratic attorney general candidate
+* `AG18R`: Number of votes for 2018 Republican attorney general candidate
+* `SH18D`: Number of votes for 2018 Democratic state house candidate
+* `SH18R`: Number of votes for 2018 Republican state house candidate
+* `SSEN18D`: Number of votes for 2018 Democratic state senate candidate
+* `SSEN18R`: Number of votes for 2018 Republican state senate candidate
+* `PRES16D`: Number of votes for 2016 Democratic presidential candidate
+* `PRES16R`: Number of votes for 2016 Republican presidential candidate
+* `USH16D`: Number of votes for 2016 Democratic US house candidate
+* `USH16R`: Number of votes for 2016 Republican US house candidate
+* `SEN16D`: Number of votes for 2016 Democratic senate candidate
+* `SEN16R`: Number of votes for 2016 Republican senate candidate
+* `SH16D`: Number of votes for 2016 Democratic state house candidate
+* `SH16R`: Number of votes for 2016 Republican state house candidate
+* `SSEN16D`: Number of votes for 2016 Democratic state senate candidate
+* `SSEN16R`: Number of votes for 2016 Republican state senate candidate
+* `GOV14D`: Number of votes for 2014 Democratic gubernatorial candidate
+* `GOV14R`: Number of votes for 2014 Republican gubernatorial candidate
+* `SOS14D`: Number of votes for 2014 Democratic secretary of state candidate
+* `SOS14R`: Number of votes for 2014 Republican secretary of state candidate
+* `TRE14D`: Number of votes for 2014 Democratic treasurer candidate
+* `TRE14R`: Number of votes for 2014 Republican treasurer candidate
+* `USH14D`: Number of votes for 2014 Democratic US house candidate
+* `USH14R`: Number of votes for 2014 Republican US house candidate
+* `AG14D`: Number of votes for 2014 Democratic attorney general candidate
+* `AG14R`: Number of votes for 2014 Republican attorney general candidate
+* `SH14D`: Number of votes for 2014 Democratic state house candidate
+* `SH14R`: Number of votes for 2014 Republican state house candidate
+* `SSEN14D`: Number of votes for 2014 Democratic state senate candidate
+* `SSEN14R`: Number of votes for 2014 Republican state senate candidate
+* `GOV12D`: Number of votes for 2012 Democratic gubernatorial candidate
+* `GOV12R`: Number of votes for 2012 Republican gubernatorial candidate
+* `PRES12D`: Number of votes for 2012 Democratic presidential candidate
+* `PRES12R`: Number of votes for 2012 Republican presidential candidate
+* `USH12D`: Number of votes for 2012 Democratic US house candidate
+* `USH12R`: Number of votes for 2012 Republican US house candidate
+* `SEN12D`: Number of votes for 2012 Democratic senate candidate
+* `SEN12R`: Number of votes for 2012 Republican senate candidate
+* `SH12D`: Number of votes for 2012 Democratic state house candidate
+* `SH12R`: Number of votes for 2012 Republican state house candidate
+* `SSEN12D`: Number of votes for 2012 Democratic state senate candidate
+* `SSEN12R`: Number of votes for 2012 Republican state senate candidate
+* `HDIST`: State House district
+* `SEND`: State Senate distict
+* `CD`: Congressional district
+
 ## Projection
-The shapefile uses a NAD83 UTM zone 16 N (or EPSG:26916) projection.
+The shapefiles use a NAD83 UTM zone 16 N (or EPSG:26916) projection.
 
 ## Rating
-We give this shapefile a B rating. Wisconsin's Legislative Technology Services Bureau (LTSB) disaggregates election data from ward groups to wards using voting age population rather than voting eligible population. The use of voting age population to disaggregate results can be misleading particularly in wards with a large population of people who are over 18, but are incarcerated and thus not eligible to vote. MGGG and its collaborators are currently working to create a wards shapefile dissagregated by voting eligible population.
+We give these shapefile a B rating, because of the extensive disaggregation process.
