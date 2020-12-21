@@ -253,6 +253,31 @@ NOTE: The shapefile has results for 2014 that use the LTSB code for US Senate (U
 * `SH12R`: Number of votes for 2012 Republican state house candidate
 * `SSEN12D`: Number of votes for 2012 Democratic state senate candidate
 * `SSEN12R`: Number of votes for 2012 Republican state senate candidate
+* `TOTPOP`: Total population from 2010 Decennial Census
+* `NH_WHITE`: White, non-hispanic, population from 2010 Decennial Census
+* `NH_BLACK`: Black, non-hispanic, population from 2010 Decennial Census
+* `NH_AMIN`: American Indian and Alaska Native, non-hispanic, population from 2010 Decennial Census
+* `NH_ASIAN`: Asian, non-hispanic, population from 2010 Decennial Census
+* `NH_NHPI`: Native Hawaiian and Pacific Islander, non-hispanic, population from 2010 Decennial Census
+* `NH_OTHER`: Other race, non-hispanic, population from 2010 Decennial Census
+* `NH_2MORE`: Two or more races, non-hispanic, population from 2010 Decennial Census
+* `HISP`: Hispanic population from 2010 Decennial Census
+* `H_WHITE`: White, hispanic, population from 2010 Decennial Census
+* `H_BLACK`: Black, hispanic, population from 2010 Decennial Census
+* `H_AMIN`: American Indian and Alaska Native, hispanic, population from 2010 Decennial Census
+* `H_ASIAN`: Asian, hispanic, population from 2010 Decennial Census
+* `H_NHPI`: Native Hawaiian and Pacific Islander, hispanic, population from 2010 Decennial Census
+* `H_OTHER`: Other race, hispanic, population from 2010 Decennial Census
+* `H_2MORE`: Two or more races, hispanic, population from 2010 Decennial Census
+* `VAP`: Total voting age population from 2010 Decennial Census
+* `HVAP`: Hispanic voting age population from 2010 Decennial Census
+* `WVAP`: White, non-hispanic, voting age population from 2010 Decennial Census
+* `BVAP`: Black, non-hispanic, voting age population from 2010 Decennial Census
+* `AMINVAP`: American Indian and Alaska Native, non-hispanic, voting age population from 2010 Decennial Census
+* `ASIANVAP`: Asian, non-hispanic, voting age population from 2010 Decennial Census
+* `NHPIVAP`: Native Hawaiian and Pacific Islander, non-hispanic, voting age population from 2010 Decennial Census
+* `OTHERVAP`: Other race, non-hispanic, voting age population from 2010 Decennial Census
+* `2MOREVAP`: Two or more races, non-hispanic, voting age population from 2010 Decennial Census
 * `HDIST`: State House district
 * `SEND`: State Senate distict
 * `CD`: Congressional district
