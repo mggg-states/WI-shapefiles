@@ -287,3 +287,23 @@ The shapefiles use a NAD83 UTM zone 16 N (or EPSG:26916) projection.
 
 ## Rating
 We give these shapefile a B rating, because of the extensive disaggregation process.
+
+
+# Wisconsin Dual Graphs
+A properly connected dual graph used for running GerryChain can be found in the files `wisconsin2011_dualgraph.json` and `wisconsin2020_dualgraph.json`, for 2011 wards and 2020 wards, respectively.  These dual graphs differ from a dual graph that GerryChain builds from this repository's shapefiles in the following ways (see below for exact edges deleted):
+### 2011 Dual Graph
+- added edges across the Sturgeon Bay Ship Canal connecting wards that have bridges between them
+### 2020 Dual Graph
+- added edge connecting tip of Door Peninsula to Washington Island, along the Door County-Washington Island ferry line
+- added edge connecting Apostle Islands to Red Cliff/Bayfield, as students are part of the Bayfield School District 
+
+If planning to run GerryChain on these shapefiles, we suggest loading the proper graph via `Graph.load_json()` instead of creating a graph from `Graph.from_file()` and saving that graph locally for further use.
+
+### 2011 Changed edges by `GEOID10`
+- (55029778750005, 55029778750008) added
+- (55029778750008, 55029778750003) added
+
+### 2020 Changed edges by `Code-2`
+- (1519, 1474) added
+- (64,185) added
+- (1488,1492) added
